@@ -40,21 +40,19 @@ class ViewController: UIViewController {
     
     @IBAction func touchNumber(_ sender: UIButton) {
         if let digitString = sender.currentTitle,
-            let digitNumber = Double(digitString),
-            let displayValue = displayValue{
+            let displayValue = displayLabel.text{
             if isTyping {
-                self.displayValue = displayValue + digitNumber
+                self.displayLabel.text = displayValue + digitString
             } else {
-                displayLabel.text = "\(digitNumber)"
+                displayLabel.text = "\(digitString)"
                 isTyping = true
             }
         }
-        
-        
     }
     
     @IBAction func performOperation(_ sender: UIButton) {
         brainCalculator.setOperand(displayValue!)
+        isTyping = false
         if let symbol = sender.currentTitle {
             brainCalculator.performOperation(symbol)
             displayValue = brainCalculator.result
@@ -62,10 +60,5 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-    
-
-
 }
 

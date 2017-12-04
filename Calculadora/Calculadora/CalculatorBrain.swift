@@ -25,10 +25,17 @@ struct CalculatorBrain {
     "e": Operation.constant(M_E),
         "√":Operation.unary(sqrt),
         "±": Operation.unary({$0}),
-        "X": Operation.binary({$0 * $1}),
+        "x²": Operation.unary({$0*$0}),
+        "x³": Operation.unary({$0*$0*$0}),
+        "log10": Operation.unary({log10($0)}),
+        "sen": Operation.unary({sin($0)}),
+        "cos": Operation.unary({cos($0)}),
+        "tan": Operation.unary({tan($0)}),
+        "x": Operation.binary({$0 * $1}),
         "+": Operation.binary({$0 + $1}),
         "-": Operation.binary({$0 - $1}),
-        "÷": Operation.binary({$0 / $1})
+        "÷": Operation.binary({$0 / $1}),
+        "=": Operation.equals
         
     ]
     
@@ -56,7 +63,7 @@ struct CalculatorBrain {
             case .binary(let function): if let accumulator = accumulator {
                 pbo = PendingBinaryOperation(firstOperand: accumulator, function: function)
                 }
-            case .equals: break
+            case .equals: performPendingBinaryOperation()
             }
             
         }
