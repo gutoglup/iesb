@@ -1,0 +1,3 @@
+language: swift
+xcode_project: /StarDraw/StarDraw.xcodeproj
+xcode_scheme: StarDrawTests
