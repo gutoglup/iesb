@@ -1,3 +1,5 @@
 language: swift
 xcode_project: /StarDraw/StarDraw.xcodeproj
 xcode_scheme: StarDrawTests
+os: osx
+osx_image: xcode9.2
