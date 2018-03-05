@@ -1,5 +1,9 @@
 language: swift
-xcode_project: /StarDraw/StarDraw.xcodeproj
-xcode_scheme: StarDrawTests
+xcode_project: 
+  - /StarDraw/StarDraw.xcodeproj
+  - /DesenhoView/DesenhoView.xcodeproj
+xcode_scheme: 
+  - StarDrawTests
+  - DesenhoViewTests
 os: osx
 osx_image: xcode9.2
