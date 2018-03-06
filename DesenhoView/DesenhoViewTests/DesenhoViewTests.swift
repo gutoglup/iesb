@@ -22,8 +22,7 @@ class DesenhoViewTests: XCTestCase {
     }
     
     func testExample() {
-        let calc = 18
-        XCTAssert(calc == 21)
+        
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
