@@ -2,8 +2,10 @@ language: objective-c
 xcode_project: 
   - /StarDraw/StarDraw.xcodeproj
   - /DesenhoView/DesenhoView.xcodeproj
+  - /BugDraw/BugDraw.xcodeproj
 xcode_scheme: 
   - StarDrawTests
   - DesenhoViewTests
+  - BugDrawTests
 os: osx
 osx_image: xcode9.2
