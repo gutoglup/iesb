@@ -1,4 +1,17 @@
 language: objective-c
+os: osx
+osx_image: xcode9.2
+
+
+before_install:
+  - gem install cocoapods
+  - brew update
+
+script:
+  - xcodebuild -workspace ./StarDraw/StarDraw.xcodeproj -scheme StarDraw -sdk iphonesimulator -configuration Debug build test
+  - xcodebuild -workspace ./DesenhoView/DesenhoView.xcodeproj -scheme DesenhoView -sdk iphonesimulator -configuration Debug build test
+  - xcodebuild -workspace .//BugDraw/BugDraw.xcodeproj -scheme BugDraw -sdk iphonesimulator -configuration Debug build test
+
 xcode_project: 
   - /StarDraw/StarDraw.xcodeproj
   - /DesenhoView/DesenhoView.xcodeproj
@@ -7,5 +20,3 @@ xcode_scheme:
   - StarDrawTests
   - DesenhoViewTests
   - BugDrawTests
-os: osx
-osx_image: xcode9.2

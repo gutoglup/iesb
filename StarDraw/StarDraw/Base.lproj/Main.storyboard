@@ -24,10 +24,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="points">
-                                        <integer key="value" value="126"/>
+                                        <integer key="value" value="116"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="distanceOfCenter">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="55"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                         <color key="value" red="0.2426725347" green="0.50922151609999999" blue="0.79346481950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
