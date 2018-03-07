@@ -8,15 +8,6 @@ before_install:
   - brew update
 
 script:
-  - xcodebuild -project ./StarDraw/StarDraw.xcodeproj -scheme StarDraw -sdk iphonesimulator -configuration Debug build test
-  - xcodebuild -project ./DesenhoView/DesenhoView.xcodeproj -scheme DesenhoView -sdk iphonesimulator -configuration Debug build test
-  - xcodebuild -project .//BugDraw/BugDraw.xcodeproj -scheme BugDraw -sdk iphonesimulator -configuration Debug build test
-
-xcode_project: 
-  - /StarDraw/StarDraw.xcodeproj
-  - /DesenhoView/DesenhoView.xcodeproj
-  - /BugDraw/BugDraw.xcodeproj
-xcode_scheme: 
-  - StarDrawTests
-  - DesenhoViewTests
-  - BugDrawTests
+  - xcodebuild -project StarDraw/StarDraw.xcodeproj -scheme StarDraw -sdk iphonesimulator -destination 'platform=iOS,id=iPhoneUUID' -configuration Debug build test
+  - xcodebuild -project DesenhoView/DesenhoView.xcodeproj -scheme DesenhoView -sdk iphonesimulator -destination 'platform=iOS,id=iPhoneUUID' -configuration Debug build test
+  - xcodebuild -project BugDraw/BugDraw.xcodeproj -scheme BugDraw -sdk iphonesimulator -destination 'platform=iOS,id=iPhoneUUID' -configuration Debug build test
