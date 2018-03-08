@@ -57,12 +57,10 @@ class StarView: UIView {
     }
     
     fileprivate func xPointOfCircle(_ distanceOfCenter: CGFloat, _ angle: CGFloat, _ angleIncrement: CGFloat, _ offsetCenter: CGFloat) -> CGFloat {
-        print("The cos \(distanceOfCenter * cos(angle + angleIncrement) + offsetCenter)");
         return distanceOfCenter * cos(angle + angleIncrement) + offsetCenter
     }
     
     fileprivate func yPointOfCircle(_ distanceOfCenter: CGFloat, _ angle: CGFloat, _ angleIncrement: CGFloat, _ offsetCenter: CGFloat) -> CGFloat {
-        print("The sin \(distanceOfCenter * sin(angle + angleIncrement) + offsetCenter)");
         return distanceOfCenter * sin(angle + angleIncrement) + offsetCenter
     }
 
