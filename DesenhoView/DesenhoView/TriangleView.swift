@@ -21,6 +21,7 @@ class TriangleView: UIView {
     var lineWidth: CGFloat = 3
     
     override func draw(_ rect: CGRect) {
+        
         let path = UIBezierPath()
         path.move(to: CGPoint(x: rect.midX, y: lineWidth))
         path.addLine(to: CGPoint(x: lineWidth, y: rect.size.height-lineWidth))
@@ -33,10 +34,9 @@ class TriangleView: UIView {
         fillColor.setFill()
         path.stroke()
         path.fill()
-
-        
-        
     }
+    
+    
  
 
 }

@@ -15,6 +15,8 @@
 		D16F860C2050B9BD009F6839 /* TabBarOrganizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F860B2050B9BD009F6839 /* TabBarOrganizerUITests.swift */; };
 		D16F861A2050BA9F009F6839 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F86192050BA9F009F6839 /* StarView.swift */; };
 		D16F861C2050BAAD009F6839 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F861B2050BAAD009F6839 /* TriangleView.swift */; };
+		D16F86202050C0AB009F6839 /* TriangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F861F2050C0AB009F6839 /* TriangleViewController.swift */; };
+		D16F86222050C21F009F6839 /* SurpriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F86212050C21F009F6839 /* SurpriseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D16F860D2050B9BD009F6839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D16F86192050BA9F009F6839 /* StarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarView.swift; path = ../../StarDraw/StarDraw/StarView.swift; sourceTree = "<group>"; };
 		D16F861B2050BAAD009F6839 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriangleView.swift; path = ../../DesenhoView/DesenhoView/TriangleView.swift; sourceTree = "<group>"; };
+		D16F861F2050C0AB009F6839 /* TriangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewController.swift; sourceTree = "<group>"; };
+		D16F86212050C21F009F6839 /* SurpriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurpriseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				D16F86192050BA9F009F6839 /* StarView.swift */,
 				D16F85EB2050B9BD009F6839 /* AppDelegate.swift */,
 				D16F861B2050BAAD009F6839 /* TriangleView.swift */,
+				D16F861F2050C0AB009F6839 /* TriangleViewController.swift */,
+				D16F86212050C21F009F6839 /* SurpriseViewController.swift */,
 				D16F85EF2050B9BD009F6839 /* Main.storyboard */,
 				D16F85F22050B9BD009F6839 /* Assets.xcassets */,
 				D16F85F42050B9BD009F6839 /* LaunchScreen.storyboard */,
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16F86202050C0AB009F6839 /* TriangleViewController.swift in Sources */,
 				D16F861A2050BA9F009F6839 /* StarView.swift in Sources */,
+				D16F86222050C21F009F6839 /* SurpriseViewController.swift in Sources */,
 				D16F861C2050BAAD009F6839 /* TriangleView.swift in Sources */,
 				D16F85EC2050B9BD009F6839 /* AppDelegate.swift in Sources */,
 			);
