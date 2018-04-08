@@ -15,16 +15,18 @@ struct CalculatorBrain {
     
     var result : Double {
         get {
-            return self.accumulator!
+            return self.accumulator ?? 0
         }
     }
     var accumulator: Double?
+    var lastExpression: UnaryOperation?
+    
     private var pbo: PendingBinaryOperation?
     private var operations: [String: Operation] = [
-    "π": Operation.constant(Double.pi),
-    "e": Operation.constant(M_E),
-        "√":Operation.unary(sqrt),
-        "±": Operation.unary({$0}),
+        "π": Operation.constant(Double.pi),
+        "e": Operation.constant(M_E),
+        "√":Operation.unary({sqrt($0)}),
+        "±": Operation.unary({-$0}),
         "x²": Operation.unary({$0*$0}),
         "x³": Operation.unary({$0*$0*$0}),
         "log10": Operation.unary({log10($0)}),
@@ -59,6 +61,7 @@ struct CalculatorBrain {
             case .unary(let function):
                 if let accumulator = accumulator {
                     self.accumulator = function(accumulator)
+                    lastExpression = function
                 }
             case .binary(let function): if let accumulator = accumulator {
                 pbo = PendingBinaryOperation(firstOperand: accumulator, function: function)
@@ -71,7 +74,7 @@ struct CalculatorBrain {
     
     private mutating func performPendingBinaryOperation() {
         if let accumulator = accumulator {
-            self.accumulator = pbo?.perform(with: accumulator)
+            self.accumulator = pbo?.perform(with: accumulator) ?? accumulator
         }
     }
     
@@ -82,6 +85,16 @@ struct CalculatorBrain {
         func perform(with secondOperand: Double) -> Double {
             return function(firstOperand, secondOperand)
         }
+    }
+    
+    public func isUnary(_ symbol: String) -> Bool {
+        if let operation = operations[symbol] {
+            switch operation {
+            case .unary: return true
+            default: break
+            }
+        }
+        return false
     }
     
 }

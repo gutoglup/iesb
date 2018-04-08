@@ -30,7 +30,9 @@ class TriangleViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier, identifier == "surpriseIdentifier", let destination = segue.destination as? SurpriseViewController {
+        if let identifier = segue.identifier,
+            identifier == "surpriseIdentifier",
+            let destination = segue.destination as? SurpriseViewController {
             print("Navegando para Surprise View Controller")
         }
     }
